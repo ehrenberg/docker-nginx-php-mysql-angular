@@ -1,0 +1,8 @@
+src
+!src/
+src/*
+!src/angular/
+src/angular/*
+!src/angular/Dockerfile
+!src/angular/.dockerignore
+.idea
