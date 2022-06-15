@@ -3,6 +3,7 @@ WORKDIR "/application"
 
 RUN apt-get update; \
     apt-get -y --no-install-recommends install \
+		php8.1-opcache \
         php8.1-http \
         php8.1-raphf \
         php8.1-imap \ 
