@@ -1,8 +1,5 @@
 version: '3.1'
 services:
-    memcached:
-        image: 'memcached:alpine'
-
     mysql:
         image: 'mysql:8.0'
         command: mysqld --default-authentication-plugin=mysql_native_password
@@ -16,9 +13,6 @@ services:
             - MYSQL_PASSWORD=password
         ports:
             - '3306:3306'
-
-    clickhouse:
-        image: 'yandex/clickhouse-server:latest'
 
     webserver:
         image: 'nginx:alpine'
@@ -39,6 +33,18 @@ services:
             - /src/api/vendor
         ports:
             - '3001:3001'
+        links:
+            - cache
+
+    cache:
+        image: redis:alpine
+        restart: always
+        ports:
+            - '6379:6379'
+        command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+        volumes:
+            - ./cache:/data
+
     angular:
         build: src/angular
         working_dir: /application

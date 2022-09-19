@@ -9,3 +9,4 @@ src/angular/*
 !src/angular/Dockerfile
 !src/angular/.dockerignore
 .idea
+cache
