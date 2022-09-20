@@ -1,4 +1,4 @@
-# Docker Nginx PHP 8 Mysql 8 Angular 13
+# Docker Nginx PHP 8 Mysql 8 Angular 13 Redis
 
 Docker Container with
 - Nginx (Latest)
