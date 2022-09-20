@@ -26,11 +26,11 @@ $ docker-compose down
 ## Credentials
 All important Credentials
 1. MySQL (root)
-    * Username:ssp
-    * Password: password
-    * Database: ssp
+    * Username: "ssp"
+    * Password: "password"
+    * Database: "ssp"
 2. Redis Passwort
-    * password
+    * "password"
 
 ## Ports
 You can connect to the systems over these ports:
