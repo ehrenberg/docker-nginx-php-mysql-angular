@@ -1,12 +1,11 @@
 # Docker Nginx PHP 8 Mysql 8 Angular 13
 
 Docker Container with
-- Nginx Newest
+- Nginx (Latest)
 - PHP 8.1
 - Mysql 8.0
 - Angular 13.3.7
-- Memcached
-- Clickhouse
+- Redis Alpine
 
 ## Installation
 
@@ -23,21 +22,15 @@ $ docker-compose down
 
 ## Usage
 
-If Angular isnt running. Try to change host in package.json File
 
-```json
-"scripts": {
-    "ng": "ng",
-    "start": "ng serve --host 0.0.0.0",
-    ...
-```
 ## Credentials
 All important Credentials
 1. MySQL (root)
     * Username:ssp
     * Password: password
     * Database: ssp
-2. 
+2. Redis Passwort
+    * password
 
 ## Ports
 You can connect to the systems over these ports:
@@ -45,6 +38,7 @@ You can connect to the systems over these ports:
 - Symfony: Port 80
 - Angular: Port 4200
 - MySQL: Port 3306
+- Redis: Port 6379
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
