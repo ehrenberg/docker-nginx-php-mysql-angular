@@ -65,7 +65,8 @@ services:
           MERCURE_PUBLISHER_JWT_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOlsiKiJdfX0.iHLdpAEjX4BqCsHJEegxRmO-Y6sMxXwNATrQyRNt3GY'
           MERCURE_SUBSCRIBER_JWT_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOlsiKiJdfX0.iHLdpAEjX4BqCsHJEegxRmO-Y6sMxXwNATrQyRNt3GY'
           MERCURE_EXTRA_DIRECTIVES: |-
-            cors_origins "*"
+            cors_origins "http://localhost:4200"
+            publish_origins "http://localhost:4200"
             anonymous
         ports:
           - "1337:80"
