@@ -10,3 +10,4 @@ src/angular/*
 !src/angular/.dockerignore
 .idea
 cache
+logs
